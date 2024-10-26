@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>Oxence - Web Design Company React NextJS Template</title>
+        <title>FIT Media</title>
         <link
           rel="shortcut icon"
           href="assets/images/favicon1.png"

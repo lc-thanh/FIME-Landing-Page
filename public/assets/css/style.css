@@ -43,6 +43,7 @@
 /******************* 01. Default Style *****************/
 /*******************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 * {
   margin: 0;
@@ -5398,7 +5399,7 @@ h6,
   -webkit-transform: translateY(60px);
   -ms-transform: translateY(60px);
   transform: translateY(60px);
-  font-family: "Shadows Into Ligh", cursive;
+  font-family: "Caveat", cursive;
 }
 @media only screen and (max-width: 1199px) {
   .slider-video .video-title {
@@ -5422,6 +5423,7 @@ h6,
 }
 .slider-video .video-title .cd-words-wrapper {
   padding: 0;
+  overflow: visible;
 }
 .slider-video .video-title .cd-words-wrapper span {
   padding: 0;
