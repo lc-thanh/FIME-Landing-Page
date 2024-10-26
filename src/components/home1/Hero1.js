@@ -7,7 +7,7 @@ const Hero1 = () => {
     arrows: false,
     dots: false,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     slidesToScroll: 1,
@@ -167,12 +167,12 @@ const Hero1 = () => {
               backgroundPosition: "center",
             }}
           >
-            <a
+            {/* <a
               href="https://www.youtube.com/watch?v=9Y7ma241N8k"
               className="mfp-iframe video-play"
             >
               <i className="fas fa-play" />
-            </a>
+            </a> */}
             <span className="video-title cd-headline clip">
               <span className="cd-words-wrapper">
                 <b className="is-visible">Event</b>
