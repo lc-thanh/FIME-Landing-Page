@@ -5400,7 +5400,6 @@ h6,
   -ms-transform: translateY(60px);
   transform: translateY(60px);
   font-family: "Caveat", cursive;
-  padding: 10px 10px;
 }
 @media only screen and (max-width: 1199px) {
   .slider-video .video-title {
