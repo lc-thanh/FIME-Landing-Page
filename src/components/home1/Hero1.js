@@ -7,7 +7,7 @@ const Hero1 = () => {
     arrows: false,
     dots: false,
     fade: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     slidesToScroll: 1,
@@ -39,16 +39,22 @@ const Hero1 = () => {
                 </span>
               </h1>
               <div className="slider-btns">
-                <Link href="/contact">
-                  <a className="theme-btn">
-                    Fanpage <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
-                <Link href="/services">
-                  <a className="theme-btn style-three">
-                    Tìm hiểu thêm <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
+                <a
+                  className="theme-btn"
+                  href="https://www.facebook.com/fitmediahaui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fanpage <i className="fas fa-angle-double-right" />
+                </a>
+                <a
+                  className="theme-btn style-three"
+                  href="https://fit.haui.edu.vn/vn/cau-lac-bo/bo-phan-truyen-thong-khoa-cntt-fit-media/67474"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tìm hiểu thêm <i className="fas fa-angle-double-right" />
+                </a>
               </div>
             </div>
           </div>
@@ -73,6 +79,7 @@ const Hero1 = () => {
             </span>
           </div>
         </div>
+
         <div className="slider-item">
           <div className="container">
             <div className="slider-content">
@@ -93,16 +100,22 @@ const Hero1 = () => {
                 </span>
               </h1>
               <div className="slider-btns">
-                <Link href="/contact">
-                  <a className="theme-btn">
-                    Fanpage <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
-                <Link href="/services">
-                  <a className="theme-btn style-three">
-                    Tìm hiểu thêm <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
+                <a
+                  className="theme-btn"
+                  href="https://www.facebook.com/fitmediahaui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fanpage <i className="fas fa-angle-double-right" />
+                </a>
+                <a
+                  className="theme-btn style-three"
+                  href="https://fit.haui.edu.vn/vn/cau-lac-bo/bo-phan-truyen-thong-khoa-cntt-fit-media/67474"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tìm hiểu thêm <i className="fas fa-angle-double-right" />
+                </a>
               </div>
             </div>
           </div>
@@ -114,7 +127,7 @@ const Hero1 = () => {
             }}
           >
             <a
-              href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+              href="https://youtu.be/99Eo34FzjeY?si=es6RMy7gxgrOHo2a"
               className="mfp-iframe video-play"
             >
               <i className="fas fa-play" />
@@ -127,6 +140,7 @@ const Hero1 = () => {
             </span>
           </div>
         </div>
+
         <div className="slider-item">
           <div className="container">
             <div className="slider-content">
@@ -147,16 +161,22 @@ const Hero1 = () => {
                 </span>
               </h1>
               <div className="slider-btns">
-                <Link href="/contact">
-                  <a className="theme-btn">
-                    Fanpage <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
-                <Link href="/services">
-                  <a className="theme-btn style-three">
-                    Tìm hiểu thêm <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link>
+                <a
+                  className="theme-btn"
+                  href="https://www.facebook.com/fitmediahaui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fanpage <i className="fas fa-angle-double-right" />
+                </a>
+                <a
+                  className="theme-btn style-three"
+                  href="https://fit.haui.edu.vn/vn/cau-lac-bo/bo-phan-truyen-thong-khoa-cntt-fit-media/67474"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tìm hiểu thêm <i className="fas fa-angle-double-right" />
+                </a>
               </div>
             </div>
           </div>

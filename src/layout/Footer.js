@@ -17,56 +17,97 @@ const Footer1 = () => (
   <footer className="main-footer footer-two pt-80 bgc-lighter">
     <div className="container">
       <div className="row justify-content-xl-between justify-content-center">
-        <div className="col-xl-4 col-lg-5 col-md-6">
+        <div className="col-xl-6 col-md-6">
           <div className="footer-widget widget_about me-md-5 wow fadeInUp delay-0-2s">
             <div className="footer-logo mb-25">
-              <Link href="/">
-                <a>
-                  <img src="assets/images/logos/logo-four.png" alt="Logo" />
-                </a>
-              </Link>
+              <a
+                href="https://www.facebook.com/fitmediahaui"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  width={60}
+                  height={60}
+                  src="assets/images/logos/logo-four.png"
+                  alt="Logo"
+                />
+              </a>
             </div>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremq dantium, totam rem aperiam eaqu quae ab illo
-              inventore veritatis et quasi architecto beatae
+            <p style={{ textAlign: "justify" }}>
+              FIT Media - Bộ phận truyền thông khoa CNTT, Trường Đại học Công
+              nghiệp Hà Nội, nơi kết nối sinh viên với những thông tin nhanh
+              chóng và chính xác. Với sự chuyên nghiệp và sáng tạo, chúng tôi
+              luôn nỗ lực mang đến những sản phẩm truyền thông chất lượng, hỗ
+              trợ và đồng hành cùng các sự kiện lớn nhỏ trong và ngoài trường.
+              Hãy kết nối với chúng tôi để cập nhật những tin tức mới nhất và
+              cùng tạo nên những giá trị ý nghĩa!
             </p>
             <div className="social-style-two pt-5">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/fitmediahaui"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <i className="fab fa-facebook-f" />
               </a>
-              <a href="#">
-                <i className="fab fa-twitter" />
+              <a
+                href="https://www.tiktok.com/@fitmedia.haui"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i className="fi fi-brands-tik-tok"></i>
               </a>
-              <a href="#">
-                <i className="fab fa-linkedin-in" />
+              <a
+                href="https://www.youtube.com/@fitmedia9790"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i className="fi fi-brands-youtube"></i>
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <i className="fab fa-behance" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
-        <div className="col-xl-4 col-md-6">
+        <div className="col-xl-6 col-md-6">
           <div className="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
             <h4 className="footer-title">Quick Links</h4>
             <ul className="list-style-two">
               <li>
-                <Link href="/service-details">Wed Design (UI/UX)</Link>
+                <a
+                  href="https://www.facebook.com/fitmediahaui"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Our Fanpage
+                </a>
               </li>
               <li>
-                <Link href="/about">About company</Link>
+                <a
+                  href="https://www.tiktok.com/@fitmedia.haui"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Our Tiktok
+                </a>
               </li>
               <li>
-                <Link href="/service-details">Web development</Link>
+                <a
+                  href="https://www.youtube.com/@fitmedia9790"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Youtube Channel
+                </a>
               </li>
               <li>
-                <Link href="/team">Meet our teams</Link>
+                <a>Meet our teams</a>
               </li>
               <li>
-                <Link href="/service-details">SEO Optimization</Link>
+                <a>Contact</a>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/service-details">Case Stories</Link>
               </li>
               <li>
@@ -83,11 +124,11 @@ const Footer1 = () => (
               </li>
               <li>
                 <Link href="/service-details">Landing Pages Design</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
-        <div className="col-xl-4 col-lg-6 col-md-8">
+        {/* <div className="col-xl-4 col-lg-6 col-md-8">
           <div className="footer-widget widget_newsletter wow fadeInUp delay-0-6s">
             <h4 className="footer-title">Newsletter</h4>
             <p>Sing up to get more every updates</p>
@@ -98,13 +139,13 @@ const Footer1 = () => (
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     <div className="footer-bottom mt-30 pt-25 pb-10">
       <div className="container">
         <div className="copyright-text text-center">
-          <p>© Copyright 2022 Oxence. All right reserved</p>
+          <p>© Copyright 2024 FIT Media. All right reserved</p>
         </div>
       </div>
     </div>

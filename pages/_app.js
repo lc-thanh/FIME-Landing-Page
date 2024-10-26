@@ -27,6 +27,11 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         /> */}
 
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+        />
+
         {/* Font Awesome */}
         <link rel="stylesheet" href="assets/css/fontawesome-5.14.0.min.css" />
         {/* Bootstrap */}

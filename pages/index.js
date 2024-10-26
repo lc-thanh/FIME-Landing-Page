@@ -87,20 +87,20 @@ const IndexOnePage = () => {
                           <a href="#about">Về FIT Media</a>
                         </li>
                         <li>
-                          <a href="#featured">Vai trò</a>
+                          <a href="#products">Sản phẩm</a>
                         </li>
                         <li>
-                          <a href="#project">project</a>
+                          <a href="#activities">Hoạt động</a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="#pricing">pricing</a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a href="#contact">contact</a>
+                          <a href="#contact">Liên hệ</a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="#news">news</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </Accordion.Collapse>
                   </Accordion>
@@ -109,7 +109,7 @@ const IndexOnePage = () => {
               </div>
               {/* Nav Search */}
               <div className="nav-search py-15">
-                <button className="far fa-search" />
+                {/* <button className="far fa-search" />
                 <form
                   onSubmit={(e) => e.preventDefault()}
                   action="#"
@@ -125,7 +125,7 @@ const IndexOnePage = () => {
                     type="submit"
                     className="searchbutton far fa-search"
                   />
-                </form>
+                </form> */}
               </div>
               {/* Menu Button */}
               <div className="menu-btns">
@@ -160,67 +160,59 @@ const IndexOnePage = () => {
       <section className="feature-area-five bgc-lighter pt-100 pb-70">
         <div className="container">
           <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
-            <span className="sub-title mb-10">Core Features</span>
-            <h2>Amazing web design features</h2>
+            <span className="sub-title mb-10">Hoạt động truyền thông</span>
+            <h2>Đồng Hành Cùng Sự Kiện & Truyền Thông</h2>
           </div>
           <div className="row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
             <div className="col wow fadeInUp delay-0-2s">
               <div className="feature-item-five">
-                <i className="fi fi-tr-live-alt"></i>
+                <i className="fi fi-tr-camcorder"></i>
                 <h5>
-                  <Link href="/service-details">
-                    <a>Responsive design</a>
-                  </Link>
+                  <span>TVC / Event Production</span>
                 </h5>
               </div>
             </div>
             <div className="col wow fadeInUp delay-0-3s">
               <div className="feature-item-five">
-                <i className="flaticon-feature" />
+                <i className="fi fi-ts-aperture"></i>
                 <h5>
-                  <Link href="/service-details">
-                    <a>Powerful Customization</a>
-                  </Link>
+                  <span>Photography &amp; Yearbook</span>
                 </h5>
               </div>
             </div>
             <div className="col wow fadeInUp delay-0-4s">
               <div className="feature-item-five">
-                <i className="flaticon-aim" />
+                {/* <i className="flaticon-aim" /> */}
+                <i className="fi fi-tr-live-alt"></i>
                 <h5>
-                  <Link href="/service-details">
+                  {/* <Link href="/service-details">
                     <a>Cool &amp; modern animations</a>
-                  </Link>
+                  </Link> */}
+                  <span>Livestream Services</span>
                 </h5>
               </div>
             </div>
             <div className="col wow fadeInUp delay-0-5s">
               <div className="feature-item-five">
-                <i className="flaticon-seo" />
+                <i className="fi fi-tr-customize-computer"></i>
                 <h5>
-                  <Link href="/service-details">
-                    <a>SEO Friendly Coding</a>
-                  </Link>
+                  <span>Graphic Design &amp; Branding</span>
                 </h5>
               </div>
             </div>
             <div className="col wow fadeInUp delay-0-6s">
               <div className="feature-item-five">
-                <i className="flaticon-search-location" />
+                <i className="fi fi-tr-photo-video"></i>
                 <h5>
-                  <Link href="/service-details">
-                    <a>Best Technical supports</a>
-                  </Link>
+                  <span>Media Content Creation</span>
                 </h5>
               </div>
             </div>
             <div className="col wow fadeInUp delay-0-7s">
               <div className="feature-item-five">
-                <i className="flaticon-settings" />
+                <i className="fi fi-tr-sliders-v-square"></i>
                 <h5>
-                  <Link href="/service-details">
-                    <a>Varied Layouts &amp; parallax</a>
-                  </Link>
+                  <span>Technical Event Support</span>
                 </h5>
               </div>
             </div>
@@ -369,15 +361,15 @@ const IndexOnePage = () => {
       </section>
 
       {/* Statistics Three Area end */}
-      {/* Design Featured Start */}
+      {/* Design Products Start */}
       <section
-        id="featured"
+        id="products"
         className="design-feature-area overflow-hidden pt-130 pb-100 text-white bgc-black-with-lighting rel z-1"
       >
         <div className="container">
           <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
-            <span className="sub-title mb-10">Core Design Featured</span>
-            <h2>What we provider for website</h2>
+            <span className="sub-title mb-10">Sản phẩm chất lượng</span>
+            <h2>Các ẩn phẩm truyền thông trong và ngoài trường</h2>
           </div>
           <div className="row no-gap align-items-center">
             <div className="col-lg-3">
@@ -386,38 +378,34 @@ const IndexOnePage = () => {
                   <div className="col-lg-12 col-sm-6">
                     <div className="service-item style-three wow fadeInRight delay-0-2s">
                       <div className="icon">
-                        <i className="flaticon-design" />
+                        <i className="fi fi-ts-newspaper"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>Website Creation from Scratch</a>
-                          </Link>
+                          <span>FIT News</span>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>Cung cấp thông tin mới nhất cho các bạn sinh viên</p>
+                        {/* <Link href="/service-details"> */}
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
+                        {/* </Link> */}
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-12 col-sm-6">
                     <div className="service-item style-three wow fadeInRight delay-0-3s">
                       <div className="icon">
-                        <i className="flaticon-web-page" />
+                        <i className="fi fi-tr-gamepad"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>Website maintenance Services</a>
-                          </Link>
+                          <span>FIT Fun, FIT Games</span>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>Đem lại những giây phút giải trí, thư giãn</p>
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -442,38 +430,38 @@ const IndexOnePage = () => {
                   <div className="col-sm-6">
                     <div className="service-item style-three wow fadeInUp delay-0-3s">
                       <div className="icon">
-                        <i className="flaticon-online" />
+                        <i className="fi fi-tr-plate-eating"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>eCommerce and product selling</a>
-                          </Link>
+                          <span>Sinh Viên Ăn Gì?</span>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>
+                          Đa dạng video review ẩm thực xoay quanh cuộc sống sinh
+                          viên
+                        </p>
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div className="col-sm-6">
                     <div className="service-item style-three mt-30 wow fadeInUp delay-0-4s">
                       <div className="icon">
-                        <i className="flaticon-web-programming" />
+                        <i className="fi fi-tr-blog-text"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>Responsive websites (UI/UX) design</a>
-                          </Link>
+                          <spana>Hỗ trợ truyền thông</spana>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>
+                          Đồng hành cùng các sự kiện lớn nhỏ trong và ngoài
+                          trường
+                        </p>
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -486,38 +474,34 @@ const IndexOnePage = () => {
                   <div className="col-lg-12 col-sm-6">
                     <div className="service-item style-three mt-100 wow fadeInLeft delay-0-2s">
                       <div className="icon">
-                        <i className="flaticon-graphic-design" />
+                        <i className="fi fi-tr-workshop"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>Search Engine Optimization</a>
-                          </Link>
+                          <span>FIT Media Workshop</span>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>
+                          Nơi chia sẻ những kinh nghiệm về ngành truyền thông
+                        </p>
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-12 col-sm-6">
                     <div className="service-item style-three wow fadeInLeft delay-0-3s">
                       <div className="icon">
-                        <i className="flaticon-user-experience" />
+                        <i className="fi fi-tr-images"></i>
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">
-                            <a>User Experience and Design</a>
-                          </Link>
+                          <span>Bảo trợ hình ảnh</span>
                         </h4>
-                        <Link href="/service-details">
-                          <a className="more-btn">
-                            <i className="fal fa-long-arrow-right" />
-                          </a>
-                        </Link>
+                        <p>Lưu giữ hình ảnh chuyên nghiệp cho các sự kiện</p>
+                        <a className="more-btn">
+                          <i className="fal fa-long-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -540,19 +524,19 @@ const IndexOnePage = () => {
         </div>
       </section>
 
-      {/* Design Featured End */}
-      {/* Project Area start */}
+      {/* Design Products End */}
+      {/* Activities Area start */}
       <RecentProjects />
 
-      {/* Project Area end */}
+      {/* Activities Area end */}
       {/* Working Process Area start */}
       <section className="work-process-area pb-95 rel z-1">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="section-title text-center mb-55 wow fadeInUp delay-0-2s">
-                <span className="sub-title mb-15">Working Process</span>
-                <h2>How does we works</h2>
+                <span className="sub-title mb-15">Cơ cấu tổ chức</span>
+                <h2>Chúng tôi làm việc như thế nào?</h2>
               </div>
             </div>
           </div>
@@ -564,8 +548,11 @@ const IndexOnePage = () => {
                     <span className="number">01</span>
                     <i className="flaticon-optimization" />
                   </div>
-                  <h4>Info Gathering</h4>
-                  <p>Sit amet consectetur adipiscing elit sed eiusmod tempor</p>
+                  <h4>Ban phụ trách</h4>
+                  <p>
+                    Trưởng Bộ phận: Lê Đình Quốc và 2 Phó Bộ phận: Nguyễn Huy
+                    Công, Bùi Đức Mạnh
+                  </p>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-5 col-sm-6">
@@ -574,8 +561,13 @@ const IndexOnePage = () => {
                     <span className="number">02</span>
                     <i className="flaticon-link" />
                   </div>
-                  <h4>Idea Planning</h4>
-                  <p>Sit amet consectetur adipiscing elit sed eiusmod tempor</p>
+                  <h4>Ban Biên tập</h4>
+                  <p>
+                    Phụ trách content truyền thông trên các nền tảng Facebook,
+                    Tik Tok. Hoàn thiện kịch bản cho các ấn phẩm truyền thông,
+                    video Tik Tok và các chương trình lớn nhỏ. MC cho các chương
+                    trình, sự kiện.
+                  </p>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-5 col-sm-6">
@@ -584,8 +576,12 @@ const IndexOnePage = () => {
                     <span className="number">03</span>
                     <i className="flaticon-data" />
                   </div>
-                  <h4>Design Analysis</h4>
-                  <p>Sit amet consectetur adipiscing elit sed eiusmod tempor</p>
+                  <h4>Ban Kỹ thuật</h4>
+                  <p>
+                    Quay, chụp tại tất cả các chương trình của khoa, của trường
+                    Edit ảnh, video sau mỗi sự kiện Sản xuất các chuyên mục hàng
+                    tháng của Bộ phận
+                  </p>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-5 col-sm-6">
@@ -594,8 +590,11 @@ const IndexOnePage = () => {
                     <span className="number">04</span>
                     <i className="flaticon-star" />
                   </div>
-                  <h4>Testing &amp; Lunch</h4>
-                  <p>Sit amet consectetur adipiscing elit sed eiusmod tempor</p>
+                  <h4>Ban Tổ chức sự kiện</h4>
+                  <p>
+                    Lên ý tưởng cho các chương trình, sự kiện trong và ngoài. Bộ
+                    phận Tổ chức các chương trình gắn kết các thành viên.
+                  </p>
                 </div>
               </div>
             </div>
@@ -611,7 +610,7 @@ const IndexOnePage = () => {
 
       {/* Working Process Area end */}
       {/* CTA Area start */}
-      <section className="call-to-action-area rel z-2">
+      {/* <section className="call-to-action-area rel z-2">
         <div className="container">
           <div
             className="cta-inner bgs-cover"
@@ -649,11 +648,11 @@ const IndexOnePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Area end */}
       {/* Pricing Two Area start */}
-      <section
+      {/* <section
         id="pricing"
         className="pricing-area-two bgc-lighter pt-240 pb-100 rel z-1"
       >
@@ -797,11 +796,11 @@ const IndexOnePage = () => {
             alt="Shape"
           />
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Two Area end */}
       {/* Testimonial Area Start */}
-      <ClientsFeedback />
+      {/* <ClientsFeedback /> */}
 
       {/* Testimonial Area End */}
       {/* Contact Area Start */}
@@ -815,18 +814,24 @@ const IndexOnePage = () => {
               <div className="contact-info-area text-white rmb-75 wow fadeInLeft delay-0-2s">
                 <div className="section-title mb-55">
                   <h2>
-                    Have any project on mind! feel free contact with us or{" "}
-                    <span>say hello</span>
+                    Bạn cần giải pháp truyền thông? Hãy <span>liên hệ </span>
+                    với chúng tôi!
                   </h2>
                 </div>
                 <div className="contact-info-wrap">
+                  <h5 style={{ marginBottom: "20px" }}>
+                    Bộ phận truyền thông khoa Công nghệ thông tin - Trường Đại
+                    học Công nghiệp Hà Nội
+                  </h5>
                   <div className="contact-info-item">
                     <div className="icon">
                       <i className="fal fa-map-marker-alt" />
                     </div>
                     <div className="content">
-                      <span className="title">Location</span>
-                      <b className="text">582 Main address, 2nd floor, USA</b>
+                      <span className="title">Địa chỉ</span>
+                      <b className="text">
+                        Văn phòng Đoàn thanh niên, tầng 8, nhà A1, Trường ĐHCNHN
+                      </b>
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -834,9 +839,11 @@ const IndexOnePage = () => {
                       <i className="far fa-envelope-open-text" />
                     </div>
                     <div className="content">
-                      <span className="title">Email Address</span>
+                      <span className="title">Email</span>
                       <b className="text">
-                        <a href="mailto:support@gmail.com">support@gmail.com</a>
+                        <a href="mailto:media@fit-haui.edu.vn">
+                          media@fit-haui.edu.vn
+                        </a>
                       </b>
                     </div>
                   </div>
@@ -845,9 +852,9 @@ const IndexOnePage = () => {
                       <i className="far fa-phone" />
                     </div>
                     <div className="content">
-                      <span className="title">Phone No</span>
+                      <span className="title">Hotline</span>
                       <b className="text">
-                        <a href="callto:+000(123)45699">+000 (123) 456 99</a>
+                        <a href="callto:+84978717514">0978.717.514</a>
                       </b>
                     </div>
                   </div>
@@ -863,15 +870,15 @@ const IndexOnePage = () => {
                 action="#"
                 method="post"
               >
-                <h4>Send us Message</h4>
+                <h4>Gửi tin nhắn cho chúng tôi</h4>
                 <input
                   type="text"
                   id="full-name"
                   name="full-name"
                   className="form-control"
                   defaultValue=""
-                  placeholder="Full Name"
-                  required=""
+                  placeholder="Họ tên"
+                  required="true"
                 />
                 <input
                   type="email"
@@ -879,29 +886,29 @@ const IndexOnePage = () => {
                   name="blog-email"
                   className="form-control"
                   defaultValue=""
-                  placeholder="Email Address"
+                  placeholder="Địa chỉ Email"
                   required=""
                 />
                 <input
-                  type="text"
-                  id="website"
-                  name="website"
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
                   className="form-control"
                   defaultValue=""
-                  placeholder="Website"
-                  required=""
+                  placeholder="Số điện thoại"
+                  required="true"
                 />
                 <textarea
                   name="message"
                   id="message"
                   className="form-control"
                   rows={5}
-                  placeholder="Write Message"
+                  placeholder="Tin nhắn"
                   required=""
                   defaultValue={""}
                 />
                 <button type="submit" className="theme-btn">
-                  Send messages <i className="fas fa-angle-double-right" />
+                  Gửi tin nhắn <i className="fas fa-angle-double-right" />
                 </button>
               </form>
             </div>
@@ -928,7 +935,7 @@ const IndexOnePage = () => {
 
       {/* Contact Area End */}
       {/* Blog Area start */}
-      <section id="news" className="news-blog-area pt-130 pb-75 rel z-1">
+      {/* <section id="news" className="news-blog-area pt-130 pb-75 rel z-1">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
@@ -1037,7 +1044,7 @@ const IndexOnePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };
