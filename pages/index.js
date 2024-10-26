@@ -579,8 +579,8 @@ const IndexOnePage = () => {
                   <h4>Ban Kỹ thuật</h4>
                   <p>
                     Quay, chụp tại tất cả các chương trình của khoa, của trường
-                    Edit ảnh, video sau mỗi sự kiện Sản xuất các chuyên mục hàng
-                    tháng của Bộ phận
+                    Edit ảnh, video sau mỗi sự kiện. Sản xuất các chuyên mục
+                    hàng tháng của Bộ phận
                   </p>
                 </div>
               </div>

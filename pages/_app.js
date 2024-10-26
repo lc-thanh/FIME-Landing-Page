@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>FIT Media</title>
+        <title>FIT Media - HaUI</title>
         <link
           rel="shortcut icon"
           href="assets/images/favicon1.png"

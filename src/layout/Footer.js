@@ -115,11 +115,14 @@ const Footer1 = () => (
               </li>
               <li>
                 <Link href="/blog">Latest News</Link>
+              </li> */}
+              <li>
+                <span>#fime</span>
               </li>
               <li>
-                <Link href="/service-details">Technical Support</Link>
+                <span>#fit_haui</span>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/contact">Contact</Link>
               </li>
               <li>
