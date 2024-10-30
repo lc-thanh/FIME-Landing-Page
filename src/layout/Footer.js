@@ -24,15 +24,40 @@ const Footer1 = () => (
                 href="https://www.facebook.com/fitmediahaui"
                 rel="noopener noreferrer"
                 target="_blank"
+                style={{
+                  marginRight: "10px",
+                }}
               >
                 <img
-                  width={60}
-                  height={60}
+                  height={50}
                   src="assets/images/logos/logo-four.png"
                   alt="Logo"
                 />
               </a>
+              <a
+                href="https://www.haui.edu.vn/vn"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  height={50}
+                  src="assets/images/footer/truong.png"
+                  alt="Logo"
+                />
+              </a>
+              <a
+                href="https://fit.haui.edu.vn/vn"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  height={60}
+                  src="assets/images/footer/khoa-doan-hoi.png"
+                  alt="Logo"
+                />
+              </a>
             </div>
+
             <p style={{ textAlign: "justify" }}>
               FIT Media - Bộ phận truyền thông khoa CNTT, Trường Đại học Công
               nghiệp Hà Nội, nơi kết nối sinh viên với những thông tin nhanh
@@ -120,7 +145,13 @@ const Footer1 = () => (
                 <span>#fime</span>
               </li>
               <li>
-                <span>#fit_haui</span>
+                <a
+                  href="https://www.facebook.com/FITHaUI"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  #fit_haui
+                </a>
               </li>
               {/* <li>
                 <Link href="/contact">Contact</Link>
