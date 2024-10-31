@@ -162,11 +162,14 @@ const IndexOnePage = () => {
         <div className="container">
           <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
             <span className="sub-title mb-10">Sự kiện đang diễn ra</span>
-            <h2>FIT Media đang hoạt động!</h2>
+            <h2>
+              ĐẠI HỘI ĐẠI BIỂU LIÊN CHI ĐOÀN KHOA CNTT LẦN THỨ XI, NHIỆM KỲ 2024
+              - 2027
+            </h2>
           </div>
           <div>
             <iframe
-              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flcthanh.kl%2Fvideos%2F884012920467276%2F&width=1280"
+              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffityouth.haui%2Fvideos%2F561999749883979%2F&width=1280"
               style={{
                 border: "none",
                 overflow: "hidden",
