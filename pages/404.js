@@ -14,36 +14,49 @@ const E404 = () => {
                 <div className="logo mb-40">
                   <Link href="/">
                     <a>
-                      <img src="assets/images/logos/logo.png" alt="" />
+                      <img
+                        src="assets/images/logos/logo-four.png"
+                        alt=""
+                        width={160}
+                        height={160}
+                      />
                     </a>
                   </Link>
                 </div>
                 <h1>OPPS!</h1>
-                <h3>This Page Can’t be Found</h3>
+                <h3>Không tìm thấy trang</h3>
                 <p>
-                  Start building your first prototype in no time. Ogency
-                  intuitive drag &amp; drop interface gives you all the building
-                  blocks
+                  Có vẻ trang bạn tìm không có, hãy quay trở lại{" "}
+                  <b>fime.edu.vn</b>
                 </p>
                 <Link href="/">
-                  <a className="theme-btn style-two mt-15 mb-50">
-                    Go to Home <i className="fas fa-angle-double-right" />
+                  <a className="theme-btn">
+                    Trang chủ <i className="fas fa-angle-double-right" />
                   </a>
                 </Link>
-                <div className="follow-us">
+                <div className="follow-us mt-3">
                   <h4>Follow Us</h4>
                   <div className="social-style-two">
-                    <a href="#">
+                    <a
+                      href="https://www.facebook.com/fitmediahaui"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
+                    <a
+                      href="https://www.tiktok.com/@fitmedia.haui"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <i className="fi fi-brands-tik-tok"></i>
                     </a>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-behance" />
+                    <a
+                      href="https://www.youtube.com/@fitmedia9790"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <i className="fi fi-brands-youtube"></i>
                     </a>
                   </div>
                 </div>
