@@ -156,6 +156,33 @@ const IndexOnePage = () => {
       {/* Slider Section Start */}
       <Hero1 />
       {/* Slider Section End */}
+
+      {/* Core Feature start */}
+      <section className="feature-area-five bgc-lighter pt-100 pb-70">
+        <div className="container">
+          <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
+            <span className="sub-title mb-10">Sự kiện đang diễn ra</span>
+            <h2>FIT Media đang hoạt động!</h2>
+          </div>
+          <div>
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flcthanh.kl%2Fvideos%2F884012920467276%2F&width=1280"
+              style={{
+                border: "none",
+                overflow: "hidden",
+                width: "100%",
+                height: "auto",
+                aspectRatio: "16/9",
+              }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Core Feature start */}
       <section className="feature-area-five bgc-lighter pt-100 pb-70">
         <div className="container">
@@ -878,7 +905,7 @@ const IndexOnePage = () => {
                   className="form-control"
                   defaultValue=""
                   placeholder="Họ tên"
-                  required="true"
+                  required={true}
                 />
                 <input
                   type="email"
@@ -887,7 +914,6 @@ const IndexOnePage = () => {
                   className="form-control"
                   defaultValue=""
                   placeholder="Địa chỉ Email"
-                  required=""
                 />
                 <input
                   type="tel"
@@ -896,7 +922,7 @@ const IndexOnePage = () => {
                   className="form-control"
                   defaultValue=""
                   placeholder="Số điện thoại"
-                  required="true"
+                  required={true}
                 />
                 <textarea
                   name="message"
@@ -904,7 +930,6 @@ const IndexOnePage = () => {
                   className="form-control"
                   rows={5}
                   placeholder="Tin nhắn"
-                  required=""
                   defaultValue={""}
                 />
                 <button type="submit" className="theme-btn">
