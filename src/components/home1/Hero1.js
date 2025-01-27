@@ -26,7 +26,8 @@ const Hero1 = () => {
                 Trường Đại học Công nghiệp Hà Nội
               </span>
               <h1>
-                Bộ phận truyền thông khoa CNTT{" "}
+                Bộ phận truyền thông Trường CNTT&TT
+                <br />
                 <span
                   style={{
                     background: "linear-gradient(101deg, #F15B29, #FFD623)",
@@ -87,7 +88,8 @@ const Hero1 = () => {
                 Trường Đại học Công nghiệp Hà Nội
               </span>
               <h1>
-                Bộ phận truyền thông khoa CNTT{" "}
+                Bộ phận truyền thông Trường CNTT&TT
+                <br />
                 <span
                   style={{
                     background: "linear-gradient(101deg, #F15B29, #FFD623)",
@@ -148,7 +150,8 @@ const Hero1 = () => {
                 Trường Đại học Công nghiệp Hà Nội
               </span>
               <h1>
-                Bộ phận truyền thông khoa CNTT{" "}
+                Bộ phận truyền thông Trường CNTT&TT
+                <br />
                 <span
                   style={{
                     background: "linear-gradient(101deg, #F15B29, #FFD623)",

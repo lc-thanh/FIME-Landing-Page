@@ -59,13 +59,13 @@ const Footer1 = () => (
             </div>
 
             <p style={{ textAlign: "justify" }}>
-              FIT Media - Bộ phận truyền thông khoa CNTT, Trường Đại học Công
-              nghiệp Hà Nội, nơi kết nối sinh viên với những thông tin nhanh
-              chóng và chính xác. Với sự chuyên nghiệp và sáng tạo, chúng tôi
-              luôn nỗ lực mang đến những sản phẩm truyền thông chất lượng, hỗ
-              trợ và đồng hành cùng các sự kiện lớn nhỏ trong và ngoài trường.
-              Hãy kết nối với chúng tôi để cập nhật những tin tức mới nhất và
-              cùng tạo nên những giá trị ý nghĩa!
+              FIT Media - Bộ phận truyền thông Trường Công nghệ thông tin và
+              Truyền thông, Trường Đại học Công nghiệp Hà Nội, nơi kết nối sinh
+              viên với những thông tin nhanh chóng và chính xác. Với sự chuyên
+              nghiệp và sáng tạo, chúng tôi luôn nỗ lực mang đến những sản phẩm
+              truyền thông chất lượng, hỗ trợ và đồng hành cùng các sự kiện lớn
+              nhỏ trong và ngoài trường. Hãy kết nối với chúng tôi để cập nhật
+              những tin tức mới nhất và cùng tạo nên những giá trị ý nghĩa!
             </p>
             <div className="social-style-two pt-5">
               <a

@@ -47,7 +47,7 @@ const RecentProjects = () => {
                 Chào Tân Sinh Viên K19
               </a>
             </h4>
-            <span className="category">Khoa CNTT</span>
+            <span className="category">Trường CNTT&TT</span>
           </div>
         </div>
         <div className="project-item style-two wow fadeInUp delay-0-4s">
@@ -137,7 +137,7 @@ const RecentProjects = () => {
                 IT FESTIVAL 2023
               </a>
             </h4>
-            <span className="category">Khoa CNTT</span>
+            <span className="category">Trường CNTT&TT</span>
           </div>
         </div>
       </Slider>

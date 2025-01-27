@@ -161,14 +161,27 @@ const IndexOnePage = () => {
       <section className="feature-area-five bgc-lighter pt-100 pb-70">
         <div className="container">
           <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
-            <span className="sub-title mb-10">Sự kiện đang diễn ra</span>
-            <h2>
-              ĐẠI HỘI ĐẠI BIỂU LIÊN CHI ĐOÀN KHOA CNTT LẦN THỨ XI, NHIỆM KỲ 2024
-              - 2027
-            </h2>
+            <span className="sub-title mb-10">Ấn phẩm mới nhất</span>
+            <h2>MV TẾT 2025 “TẾT NHÀ MÌNH” FIME x iStar</h2>
           </div>
           <div>
             <iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ffitmediahaui%2Fvideos%2F953105186403797%2F&show_text=false&width=560&t=0"
+              width="560"
+              height="314"
+              style={{
+                border: "none",
+                overflow: "hidden",
+                width: "100%",
+                height: "auto",
+                aspectRatio: "16/9",
+              }}
+              // scrolling="no"
+              // frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+            {/* <iframe
               src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffityouth.haui%2Fvideos%2F561999749883979%2F&width=1280"
               style={{
                 border: "none",
@@ -181,7 +194,7 @@ const IndexOnePage = () => {
               frameBorder="0"
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
       </section>
@@ -269,7 +282,7 @@ const IndexOnePage = () => {
               <div className="about-content-one wow fadeInUp delay-0-4s">
                 <div className="section-title mb-45">
                   <span className="sub-title mb-15">Về chúng tôi</span>
-                  <h2>Bộ phận truyền thông Khoa CNTT - FIT Media</h2>
+                  <h2>Bộ phận truyền thông Trường CNTT&TT, Trường ĐHCNHN</h2>
                 </div>
                 <ul className="list-style-one">
                   <li>
@@ -277,11 +290,11 @@ const IndexOnePage = () => {
                       <h4>Giới thiệu</h4>
                       <p>
                         Được thành lập vào ngày 17/05/2014, Bộ phận truyền thông
-                        khoa CNTT FIT Media đang từng bước từng bước khẳng định
-                        vị trí của mình tại trường Đại học Công nghiệp Hà Nội.
-                        Trong suốt chiều dài 10 năm phát triển, FIT Media luôn
-                        đóng vai trò là kênh cung cấp thông tin kịp thời và
-                        chính xác nhất cho người xem.
+                        Trường CNTT&TT - FIT Media đang từng bước từng bước
+                        khẳng định vị trí của mình tại trường Đại học Công
+                        nghiệp Hà Nội. Trong suốt chiều dài 10 năm phát triển,
+                        FIT Media luôn đóng vai trò là kênh cung cấp thông tin
+                        kịp thời và chính xác nhất cho người xem.
                       </p>
                     </div>
                   </li>
@@ -850,8 +863,8 @@ const IndexOnePage = () => {
                 </div>
                 <div className="contact-info-wrap">
                   <h5 style={{ marginBottom: "20px" }}>
-                    Bộ phận truyền thông khoa Công nghệ thông tin - Trường Đại
-                    học Công nghiệp Hà Nội
+                    Bộ phận truyền thông Trường CNTT&TT - Trường Đại học Công
+                    nghiệp Hà Nội
                   </h5>
                   <div className="contact-info-item">
                     <div className="icon">

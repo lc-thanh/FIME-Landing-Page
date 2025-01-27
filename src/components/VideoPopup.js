@@ -27,7 +27,7 @@ const VideoPopup_ = ({ close, videoID }) => {
               <iframe
                 src="https://www.youtube.com/embed/nfP5N9Yc72A?autoplay=1"
                 title="YouTube video player"
-                frameBorder="0"
+                // frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

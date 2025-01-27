@@ -15,11 +15,37 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <Head>
         <title>FIT Media - HaUI</title>
+        {/* <link
+          rel="shortcut icon"
+          href="assets/images/my-favicon/favicon1.png"
+          type="image/x-icon"
+        /> */}
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/images/my-favicon/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="/assets/images/my-favicon/favicon.svg"
+        />
         <link
           rel="shortcut icon"
-          href="assets/images/favicon1.png"
-          type="image/x-icon"
+          href="/assets/images/my-favicon/favicon.ico"
         />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/assets/images/my-favicon/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="FIT Media" />
+        <link
+          rel="manifest"
+          href="/assets/images/my-favicon/site.webmanifest"
+        />
+
         <link rel="stylesheet" href="assets/css/flaticon.min.css" />
 
         {/* <link
