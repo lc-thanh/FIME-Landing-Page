@@ -167,8 +167,6 @@ const IndexOnePage = () => {
           <div>
             <iframe
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ffitmediahaui%2Fvideos%2F953105186403797%2F&show_text=false&width=560&t=0"
-              width="560"
-              height="314"
               style={{
                 border: "none",
                 overflow: "hidden",
@@ -176,10 +174,10 @@ const IndexOnePage = () => {
                 height: "auto",
                 aspectRatio: "16/9",
               }}
-              // scrolling="no"
-              // frameBorder="0"
-              allowFullScreen={true}
+              scrolling="no"
+              frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen={true}
             ></iframe>
             {/* <iframe
               src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffityouth.haui%2Fvideos%2F561999749883979%2F&width=1280"
