@@ -5,6 +5,7 @@ const Pagination = ({ paginationCls, defaultSort }) => {
   const [active, setActive] = useState(1);
   const [state, setstate] = useState([]);
   useEffect(() => {
+    window.scrollTo(0, 2000);
     pagination(paginationCls, sort, active);
     let list = document.querySelectorAll(paginationCls);
     setstate(getPagination(list.length, sort));
@@ -14,7 +15,7 @@ const Pagination = ({ paginationCls, defaultSort }) => {
       <li className={`page-item ${active == 1 ? "disabled" : ""}`}>
         <a
           className="page-link"
-          href="#"
+          // href="#"
           onClick={(e) => {
             e.preventDefault();
             setActive(active === 1 ? 1 : active - 1);
@@ -28,7 +29,7 @@ const Pagination = ({ paginationCls, defaultSort }) => {
           <li key={i} className={`page-item ${active === s ? "active" : ""}`}>
             <a
               className="page-link"
-              href="#"
+              // href="#"
               onClick={(e) => {
                 e.preventDefault();
                 setActive(s);
@@ -41,7 +42,7 @@ const Pagination = ({ paginationCls, defaultSort }) => {
       <li className={`page-item ${active == state.length ? "disabled" : ""}`}>
         <a
           className="page-link"
-          href="#"
+          // href="#"
           onClick={(e) => {
             e.preventDefault();
             setActive(active === state.length ? state.length : active + 1);
