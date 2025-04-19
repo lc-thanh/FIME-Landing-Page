@@ -11,6 +11,7 @@ import Hero1 from "../src/components/home1/Hero1";
 import RecentProjects from "../src/components/home1/RecentProjects";
 import Layout from "../src/layout/Layout";
 import SideBar from "../src/layout/SideBar";
+import NewestProducts from "../src/components/home1/NewestProducts";
 
 const IndexOnePage = () => {
   return (
@@ -82,6 +83,9 @@ const IndexOnePage = () => {
                       <ul className="navigation onepage clearfix">
                         <li>
                           <a href="#home">Trang chủ</a>
+                        </li>
+                        <li>
+                          <a href="#newest-products">Mới nhất</a>
                         </li>
                         <li>
                           <a href="#about">Về FIT Media</a>
@@ -162,11 +166,11 @@ const IndexOnePage = () => {
         <div className="container">
           <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
             <span className="sub-title mb-10">Ấn phẩm mới nhất</span>
-            <h2>MV TẾT 2025 “TẾT NHÀ MÌNH” FIME x iStar</h2>
+            <h2>IT FESTIVAL 2025</h2>
           </div>
           <div>
             <iframe
-              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ffitmediahaui%2Fvideos%2F953105186403797%2F&show_text=false&width=560&t=0"
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https://www.facebook.com/fitmediahaui/videos/1224055816008338%2F&show_text=false&width=560&t=0"
               style={{
                 border: "none",
                 overflow: "hidden",
@@ -196,6 +200,8 @@ const IndexOnePage = () => {
           </div>
         </div>
       </section>
+
+      {/* <NewestProducts /> */}
 
       {/* Core Feature start */}
       <section className="feature-area-five bgc-lighter pt-100 pb-70">
@@ -690,8 +696,8 @@ const IndexOnePage = () => {
           </div>
         </div>
       </section> */}
-
       {/* CTA Area end */}
+
       {/* Pricing Two Area start */}
       {/* <section
         id="pricing"
@@ -838,12 +844,12 @@ const IndexOnePage = () => {
           />
         </div>
       </section> */}
-
       {/* Pricing Two Area end */}
+
       {/* Testimonial Area Start */}
       {/* <ClientsFeedback /> */}
-
       {/* Testimonial Area End */}
+
       {/* Contact Area Start */}
       <section
         id="contact"
