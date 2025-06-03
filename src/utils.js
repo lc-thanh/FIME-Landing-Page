@@ -57,3 +57,11 @@ export const getPagination = (totalNumber, sort) => {
     .map((_, idx) => idx + 1);
   return arr;
 };
+
+export const getProductImageUrl = (image) => {
+  if (!image) return undefined;
+  if (image.startsWith("http")) {
+    return image;
+  }
+  return `${process.env.NEXT_PUBLIC_STATIC_ENDPOINT}/newest-products/images/${image}`;
+};

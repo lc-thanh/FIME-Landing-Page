@@ -1,7 +1,23 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-img-element */
+import { useState } from "react";
 import Pagination from "../Pagination";
+import { getProductImageUrl } from "../../utils";
 
-const NewestProducts = () => {
+const MAX_LENGTH = 165; // Số ký tự tối đa trước khi cắt
+
+const NewestProducts = ({ products }) => {
+  const [expandedItems, setExpandedItems] = useState(new Set());
+
+  const toggleExpand = (productId) => {
+    const newExpandedItems = new Set(expandedItems);
+    if (newExpandedItems.has(productId)) {
+      newExpandedItems.delete(productId);
+    } else {
+      newExpandedItems.add(productId);
+    }
+    setExpandedItems(newExpandedItems);
+  };
+
   return (
     <section id="newest-products" className="blog-grid-area py-100 rel z-1">
       <div className="container">
@@ -14,371 +30,112 @@ const NewestProducts = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-2s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid1.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
+          {products.map((product) => {
+            const isExpanded = expandedItems.has(product.id);
+
+            // Xử lý mô tả (nếu null hoặc undefined sẽ hiển thị "Không có mô tả")
+            const description = isExpanded
+              ? product.note ?? "Không có mô tả"
+              : (product.note?.slice(0, MAX_LENGTH) ?? "Không có mô tả") +
+                (product.note && product.note.length > MAX_LENGTH ? "..." : "");
+
+            return (
+              <div key={product.id} className="col-xl-4 col-md-6">
+                <div className="blog-grid-item wow fadeInUp delay-0-2s">
+                  <div
+                    className="image"
+                    style={{
+                      width: "100%",
+                      aspectRatio: "3/2",
+                      overflow: "hidden",
+                    }}
+                  >
                     <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
+                      src={
+                        getProductImageUrl(product.image) ||
+                        "assets/images/newest-product_cover.jpg"
+                      }
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                      alt="Blog Grid"
                     />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    How To Build Group Chat App With Vanilla JS, Twilio And
-                    Node.js
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
+                  </div>
+                  <div className="blog-content">
+                    <ul
+                      className="blog-meta"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <li>
+                        <img
+                          src="assets/images/newest-product_cover.jpg"
+                          alt="Author"
+                        />
+                        <a href="#">FIT Media</a>
+                      </li>
+                      <li>
+                        <i className="far fa-calendar-alt" />
+                        <a href="#">
+                          {new Date(product.date)
+                            .toLocaleDateString("vi-VN", {
+                              day: "numeric",
+                              month: "short",
+                              year: "numeric",
+                            })
+                            .replace("thg", "Tháng")}
+                        </a>
+                      </li>
+                    </ul>
+                    <h5>
+                      <a
+                        href={product.link || "#"}
+                        target="blank"
+                        rel="noopener noreferrer"
+                      >
+                        {product.title}
+                      </a>
+                    </h5>
+                    <p
+                      style={{
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontSize: "14px",
+                      }}
+                    >
+                      {description}{" "}
+                      {product.note && product.note.length > MAX_LENGTH && (
+                        <span
+                          onClick={() => toggleExpand(product.id)}
+                          style={{
+                            display: "inline-block",
+                            cursor: "pointer",
+                            color: "gray",
+                            textDecoration: "underline",
+                          }}
+                        >
+                          {isExpanded ? "Thu gọn" : "Xem thêm"}
+                        </span>
+                      )}
+                    </p>
+                    <a
+                      href={product.link || "#"}
+                      target="blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="read-more">
+                        Xem ảnh <i className="far fa-arrow-right" />
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-2s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid1.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    How To Build Group Chat App With Vanilla JS, Twilio And
-                    Node.js
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-4s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid2.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    Smashing Podcast Episode 47 With Sara Soueidan Does
-                    Accessibility
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-6s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid3.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    Manage Accessible Design System With CSS Color-Contrast
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-2s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid4.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    How To Build Group Chat App With Vanilla JS, Twilio And
-                    Node.js
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-4s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid5.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    Smashing Podcast Episode 47 With Sara Soueidan Does
-                    Accessibility
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-6s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid6.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    Manage Accessible Design System With CSS Color-Contrast
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-2s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid7.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    How To Build Group Chat App With Vanilla JS, Twilio And
-                    Node.js
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-4s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid8.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  <li>
-                    <img
-                      src="assets/images/blog/blog-author.jpg"
-                      alt="Author"
-                    />
-                    <a href="#">Somalia D. Silva</a>
-                  </li>
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <a href="#"> 25 June 2022</a>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">
-                    Smashing Podcast Episode 47 With Sara Soueidan Does
-                    Accessibility
-                  </Link>
-                </h5>
-                <p>
-                  Sit amet consectetur adipiscin eiusmod temor incididunt labore
-                  dolore magnaes epse
-                </p>
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-md-6">
-            <div className="blog-grid-item wow fadeInUp delay-0-6s">
-              <div className="image">
-                <img src="assets/images/blog/blog-grid9.jpg" alt="Blog Grid" />
-              </div>
-              <div className="blog-content">
-                <ul className="blog-meta">
-                  {/* <li>
-                      <img
-                        src="assets/images/blog/blog-author.jpg"
-                        alt="Author"
-                      />
-                      <a href="#">Somalia D. Silva</a>
-                    </li> */}
-                  <li>
-                    <i className="far fa-calendar-alt" />
-                    <span> 25 June 2022</span>
-                  </li>
-                </ul>
-                <h5>
-                  <Link href="/blog-details">Gala IT Festival 2025</Link>
-                </h5>
-                {/* <p>
-                    Sit amet consectetur adipiscin eiusmod temor incididunt
-                    labore dolore magnaes epse
-                  </p> */}
-                <Link href="/blog-details">
-                  <a className="read-more">
-                    Read More <i className="far fa-arrow-right" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
         <ul className="pagination flex-wrap justify-content-center wow fadeInUp delay-0-2s">
           <Pagination paginationCls={".blog-grid-item"} defaultSort={6} />
@@ -387,4 +144,5 @@ const NewestProducts = () => {
     </section>
   );
 };
+
 export default NewestProducts;

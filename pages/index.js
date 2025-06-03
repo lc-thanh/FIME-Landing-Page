@@ -6,14 +6,14 @@ import dynamic from "next/dynamic";
 const Counter = dynamic(() => import("../src/components/Counter"), {
   ssr: false,
 });
-import ClientsFeedback from "../src/components/home1/ClientsFeedback";
 import Hero1 from "../src/components/home1/Hero1";
 import RecentProjects from "../src/components/home1/RecentProjects";
 import Layout from "../src/layout/Layout";
 import SideBar from "../src/layout/SideBar";
 import NewestProducts from "../src/components/home1/NewestProducts";
+import { LatestPublication } from "../src/components/home1/LatestPublication";
 
-const IndexOnePage = () => {
+const IndexOnePage = ({ publication, products }) => {
   return (
     <Layout className="home-one" footer={1} noHeader>
       <Head>
@@ -162,46 +162,9 @@ const IndexOnePage = () => {
       {/* Slider Section End */}
 
       {/* Core Feature start */}
-      <section className="feature-area-five bgc-lighter pt-100 pb-70">
-        <div className="container">
-          <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
-            <span className="sub-title mb-10">Ấn phẩm mới nhất</span>
-            <h2>IT FESTIVAL 2025</h2>
-          </div>
-          <div>
-            <iframe
-              src="https://www.facebook.com/plugins/video.php?height=314&href=https://www.facebook.com/fitmediahaui/videos/1224055816008338%2F&show_text=false&width=560&t=0"
-              style={{
-                border: "none",
-                overflow: "hidden",
-                width: "100%",
-                height: "auto",
-                aspectRatio: "16/9",
-              }}
-              scrolling="no"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              allowFullScreen={true}
-            ></iframe>
-            {/* <iframe
-              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffityouth.haui%2Fvideos%2F561999749883979%2F&width=1280"
-              style={{
-                border: "none",
-                overflow: "hidden",
-                width: "100%",
-                height: "auto",
-                aspectRatio: "16/9",
-              }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe> */}
-          </div>
-        </div>
-      </section>
+      <LatestPublication publication={publication} />
 
-      {/* <NewestProducts /> */}
+      <NewestProducts products={products} />
 
       {/* Core Feature start */}
       <section className="feature-area-five bgc-lighter pt-100 pb-70">
@@ -1094,3 +1057,37 @@ const IndexOnePage = () => {
   );
 };
 export default IndexOnePage;
+
+export async function getStaticProps() {
+  try {
+    // Gọi API để lấy dữ liệu Ấn phẩm mới nhất
+    const pulication_res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_ENDPOINT}/latest-publications/public`
+    );
+    const publication = await pulication_res.json();
+
+    // Gọi API để lấy dữ liệu Các sản phẩm mới nhất
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_ENDPOINT}/newest-products/all`
+    );
+    const products = await res.json();
+
+    // Trả về props cho component với thời gian revalidate là 60 giây
+    return {
+      props: {
+        publication,
+        products,
+      },
+      revalidate: 5, // Cập nhật lại sau mỗi 60 giây
+    };
+  } catch (error) {
+    console.error("Error fetching newest products:", error);
+    return {
+      props: {
+        publication: null,
+        products: [],
+      },
+      revalidate: 5,
+    };
+  }
+}

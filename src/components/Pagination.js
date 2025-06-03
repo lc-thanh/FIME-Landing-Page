@@ -4,8 +4,13 @@ const Pagination = ({ paginationCls, defaultSort }) => {
   let sort = defaultSort ? defaultSort : 2;
   const [active, setActive] = useState(1);
   const [state, setstate] = useState([]);
+  const [firstLoad, setFirstLoad] = useState(true);
+
   useEffect(() => {
-    window.scrollTo(0, 2000);
+    if (!firstLoad) {
+      window.scrollTo(0, 2000);
+    }
+    setFirstLoad(false);
     pagination(paginationCls, sort, active);
     let list = document.querySelectorAll(paginationCls);
     setstate(getPagination(list.length, sort));
