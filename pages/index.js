@@ -1078,7 +1078,7 @@ export async function getStaticProps() {
         publication,
         products,
       },
-      revalidate: 5, // Cập nhật lại sau mỗi 60 giây
+      revalidate: 180, // Cập nhật lại sau mỗi 60 giây
     };
   } catch (error) {
     console.error("Error fetching newest products:", error);
@@ -1087,7 +1087,7 @@ export async function getStaticProps() {
         publication: null,
         products: [],
       },
-      revalidate: 5,
+      revalidate: 180,
     };
   }
 }
