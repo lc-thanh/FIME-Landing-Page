@@ -18,6 +18,10 @@ const NewestProducts = ({ products }) => {
     setExpandedItems(newExpandedItems);
   };
 
+  if (!products || products.length === 0) {
+    return null; // Render nothing if products array is empty or undefined
+  }
+
   return (
     <section id="newest-products" className="blog-grid-area py-100 rel z-1">
       <div className="container">

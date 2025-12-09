@@ -162,7 +162,7 @@ const IndexOnePage = ({ publication, products }) => {
       {/* Slider Section End */}
 
       {/* Core Feature start */}
-      <LatestPublication publication={publication} />
+      {!!publication && <LatestPublication publication={publication} />}
 
       <NewestProducts products={products} />
 
