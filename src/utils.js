@@ -63,5 +63,7 @@ export const getProductImageUrl = (image) => {
   if (image.startsWith("http")) {
     return image;
   }
-  return `${process.env.NEXT_PUBLIC_STATIC_ENDPOINT}/newest-products/images/${image}`;
+  return `https://storage.googleapis.com/${
+    process.env.NEXT_PUBLIC_FBS_BUCKET_NAME
+  }/${encodeURIComponent(image)}`;
 };

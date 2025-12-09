@@ -91,7 +91,12 @@ const NewestProducts = ({ products }) => {
                         </a>
                       </li>
                     </ul>
-                    <h5>
+                    <h5
+                      style={{
+                        height: "60px",
+                        alignContent: "center",
+                      }}
+                    >
                       <a
                         href={product.link || "#"}
                         target="blank"

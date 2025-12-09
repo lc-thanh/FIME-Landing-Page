@@ -1072,13 +1072,12 @@ export async function getStaticProps() {
     );
     const products = await res.json();
 
-    // Trả về props cho component với thời gian revalidate là 60 giây
     return {
       props: {
         publication,
         products,
       },
-      revalidate: 180, // Cập nhật lại sau mỗi 60 giây
+      revalidate: 180, // Cập nhật lại sau mỗi 180 giây
     };
   } catch (error) {
     console.error("Error fetching newest products:", error);
